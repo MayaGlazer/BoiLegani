@@ -1,0 +1,37 @@
+
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>{{ 'LOGIN' | translate}}</mat-card-title>
+    </mat-card-header>
+    <div></div>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit($event)" class="example-form">
+      <mat-card-content>
+
+        <mat-form-field class="example-full-width">
+          <input matInput type="text" id="email" name="email" placeholder="{{ 'EMAIL' | translate }}"
+            formControlName="email" autocomplete="off">
+            <mat-error *ngIf="loginForm.controls['email'].errors">{{ errormsg }}</mat-error>
+        </mat-form-field>
+
+
+
+        <mat-form-field class="example-full-width">
+          <input matInput [type]="hide ? 'password' : 'text'" id="password" name="password"
+            placeholder="{{ 'PASSWORD' | translate }}" formControlName="password" autocomplete="off">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="loginForm.controls['password'].errors">{{errormsg}}</mat-error>
+        </mat-form-field>
+
+
+        <!-- <div class="button">
+           </div> -->
+
+      </mat-card-content>
+      <button type="submit" mat-stroked-button color="accent" class="btn-block">{{ 'LOGIN' | translate}}</button>
+    </form>
+  </mat-card>
+</div>

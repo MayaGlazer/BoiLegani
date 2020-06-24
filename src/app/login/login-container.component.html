@@ -1,0 +1,6 @@
+<app-login *ngIf="path == 'login'" [user]="userState$ | async">
+
+</app-login>
+<app-signup *ngIf="path == 'register'" [user]="userState$ | async"
+            [countries]="countriesState$ | async" [cities]="citiesState$ | async">
+</app-signup>

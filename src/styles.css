@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    margin: 0; 
+    padding: 0;
+    height: 100%; 
+    direction: rtl;
+    font-family: 'almoni', 'sans-serif' !important;
+}
+
+body { 
+    background-image: url('./assets/pink-flowers-on-trees-981364.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: 'almoni', 'sans-serif';
+}
+
+@font-face {
+    font-family: 'almoni';
+    src: url('./assets/almoni-dl-aaa-700.woff') format("woff");
+  }
+
+.mat-form-field {
+    text-align: right !important;
+    font-family: 'Varela Round';
+  }
+
+  .mat-toolbar {
+      /* font-family: 'almoni'; */
+      font-family: 'Varela Round';
+  }
+
+  .mat-card {
+    font-family: 'Varela Round';
+  }
+
+  mat-card-content {
+    font-size: 20px;
+  }
